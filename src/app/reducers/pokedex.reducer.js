@@ -7,7 +7,7 @@ import {
 
 const INITIAL_STATE = {
   pokemonList: [],
-  url: 'https://pokeapi.co/api/v2/pokemon?limit=24&offset=0',
+  url: 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=0',
   error: null,
   loading: false,
 };

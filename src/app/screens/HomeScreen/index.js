@@ -11,8 +11,6 @@ import {
 import {fetchPokemons} from '../../actions/pokedex.actions';
 import PokemonList from '../../components/PokemonList';
 
-const MenuIcon = (props) => <Icon {...props} name="settings" />;
-
 const HomeScreen = (props) => {
   const {navigation} = props;
   const dispatch = useDispatch();
@@ -21,13 +19,20 @@ const HomeScreen = (props) => {
     navigation.navigate('Settings');
   }, [navigation]);
 
+  const navigateToPokemon = useCallback(
+    (slug) => {
+      navigation.navigate('Pokemon', {slug: slug});
+    },
+    [navigation],
+  );
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
         <Button
           appearance="ghost"
           onPress={navigateToSettings}
-          accessoryLeft={MenuIcon}
+          accessoryLeft={(iconProps) => <Icon {...iconProps} name="settings" />}
         />
       ),
     });
@@ -93,7 +98,7 @@ const HomeScreen = (props) => {
 const styles = StyleSheet.create({
   layout: {flex: 1},
   safeAreaStyle: {flex: 1},
-  spinnerStyle: {alignItems: 'center'},
+  spinnerStyle: {alignItems: 'center', marginVertical: 4},
 });
 
 export default HomeScreen;

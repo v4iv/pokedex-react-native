@@ -1,5 +1,5 @@
-import { createStackNavigator } from '@react-navigation/stack'
+import {createStackNavigator} from '@react-navigation/stack';
 
-const Root = createStackNavigator()
+const Root = createStackNavigator();
 
-export default Root
+export default Root;

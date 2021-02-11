@@ -13,7 +13,7 @@ const PokemonList = (props) => {
       data={pokemons}
       initialNumberToRender={24}
       onEndReached={loadMore}
-      renderItem={PokemonCard}
+      renderItem={(pokemon) => <PokemonCard pokemon={pokemon.item} />}
     />
   );
 };

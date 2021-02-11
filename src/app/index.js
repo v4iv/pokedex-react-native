@@ -38,6 +38,11 @@ const App = () => {
                   options={{title: 'Home'}}
                 />
                 <Root.Screen
+                  name="Pokemon"
+                  component={HomeScreen}
+                  options={{title: 'POKéMON'}}
+                />
+                <Root.Screen
                   name="Settings"
                   component={SettingsScreen}
                   options={{title: 'Settings'}}
