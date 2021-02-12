@@ -19,13 +19,6 @@ const HomeScreen = (props) => {
     navigation.navigate('Settings');
   }, [navigation]);
 
-  const navigateToPokemon = useCallback(
-    (slug) => {
-      navigation.navigate('Pokemon', {slug: slug});
-    },
-    [navigation],
-  );
-
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (

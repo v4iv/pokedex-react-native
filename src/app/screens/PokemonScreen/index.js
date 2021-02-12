@@ -13,7 +13,9 @@ import PokemonDetails from '../../components/PokemonDetails';
 
 const PokemonScreen = (props) => {
   const {
-    route: {params: slug},
+    route: {
+      params: {name: slug},
+    },
   } = props;
   const dispatch = useDispatch();
 

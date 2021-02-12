@@ -3,9 +3,7 @@ import {get} from 'lodash';
 
 export const fetchPokemon = (p) => {
   return new Promise((resolve, reject) => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${p
-      .toString()
-      .toLowerCase()}`;
+    const url = `https://pokeapi.co/api/v2/pokemon/${p}`;
 
     axios
       .get(url)

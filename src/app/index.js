@@ -11,6 +11,7 @@ import {default as pokedexTheme} from './utils/theme.json';
 import {default as mapping} from '../../mapping.json';
 // Screens
 import HomeScreen from './screens/HomeScreen';
+import PokemonScreen from './screens/PokemonScreen';
 import SettingsScreen from './screens/SettingsScreen';
 
 const App = () => {
@@ -39,7 +40,7 @@ const App = () => {
                 />
                 <Root.Screen
                   name="Pokemon"
-                  component={HomeScreen}
+                  component={PokemonScreen}
                   options={{title: 'POKéMON'}}
                 />
                 <Root.Screen
